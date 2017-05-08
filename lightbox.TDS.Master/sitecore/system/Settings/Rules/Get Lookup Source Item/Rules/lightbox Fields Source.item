@@ -1,0 +1,222 @@
+----item----
+version: 1
+id: {D0910515-B23A-44EE-AC4A-EC82716D38DB}
+database: master
+path: /sitecore/system/Settings/Rules/Get Lookup Source Item/Rules/lightbox Fields Source
+parent: {8CD2CAFC-EFB2-45A4-BA5A-267B2FADE3BF}
+name: lightbox Fields Source
+master: {00000000-0000-0000-0000-000000000000}
+template: {D9BDF22F-6E17-47F3-AB64-49C717BA92DA}
+templatekey: Rule
+created: 20170508T021408Z
+
+----field----
+field: {908EF45D-4940-4B6A-857D-3739BA4ACF8F}
+name: Rule
+key: rule
+content-length: 10289
+
+<ruleset>
+  <rule uid="{9DE9CEBD-8005-4F8E-AB4E-2AB49687C7E2}" name="lightbox Site Selections">
+    <conditions>
+      <or uid="8F86A593710344578D1CF61D0EC1DD69">
+        <or uid="DC3D3D9E26644B0AA625EF1FF4BB6A68">
+          <and uid="43C539CD037743A787E50EDA7FEA6050">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="1B83F7701AF74833B069E97FE61EC7C5" token="#selections#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="EA7ED19038EB41A1B9EB1219AA694C81" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+          </and>
+          <and uid="F836AB458AD64731B35993F473FC5A52">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="B4C75FBB578540E48AC2DEDDC932039E" token="#selections#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="3E7DDEECBD7F4B659D9F0040E124397F" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" />
+          </and>
+        </or>
+        <and uid="426370128A4345C9ABA4C1CA8FCD5B38">
+          <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="37E545F2E6AF4693912A48D629A25FE7" token="#selections#" />
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="D02B74E6F1AE46B7B05B6C5335C15CA5" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{83AC52CA-6210-4671-90C8-4EE8BA33B6A9}" uid="77C0A4C662AD4E3CA1662B032B3ABD81" token="#selections#" />
+      <action id="{BBFC056D-9615-431D-94ED-AF1CF0A5AA9E}" uid="8A9C03CA65FC41A6B54D183FD2B529C5" itemid="{6D699278-7C92-4141-889F-6B15DA93131D}" />
+      <action id="{B762505F-1508-460C-97E9-A575D8854EA2}" uid="648A516B66B3437CADBB0E826EE00609" />
+    </actions>
+  </rule>
+  <rule uid="{73BF1F7E-6B81-4281-A9B4-3FFE4579A24A}" name="lightbox Site Keywords">
+    <conditions>
+      <or uid="4B04FD39AD1E48D49003C59E52984161">
+        <or uid="2F89900ABF7946C2B3FAE39C165CA812">
+          <and uid="C588EBC268044755B5DC63D810B2FA3E">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="CC36B74DE45440FBA00960F097B845D2" token="#keywords#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="DCAFADD371F24089BA63441C0BF27CC1" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+          </and>
+          <and uid="74E6D803D50D4912A581E83CB57873A4">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="61991329473942FA8F250D607389FF1E" token="#keywords#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="CF121F7753DC4A0E8A3E038CB0458D91" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" />
+          </and>
+        </or>
+        <and uid="6A7A04330BB1484AB50828EF0C2BE8F5">
+          <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="3A73829ECBA245AF9A47449739E8FBE9" token="#keywords#" />
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="44320437EC4F4EA2AC986D401582CF25" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{83AC52CA-6210-4671-90C8-4EE8BA33B6A9}" uid="BE8A68AD78FA4BF0AA5949E50491A78B" token="#keywords#" />
+      <action id="{BBFC056D-9615-431D-94ED-AF1CF0A5AA9E}" uid="DBFB31BB67C14C4EB9354465339AF1E2" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+      <action id="{B762505F-1508-460C-97E9-A575D8854EA2}" uid="21861B7EE85243699D4F32A12CB3AE56" />
+    </actions>
+  </rule>
+  <rule uid="{5B890337-F0B0-4531-8304-45EE3A462F4A}" name="lightbox Site Settings">
+    <conditions>
+      <or uid="790B2C87C93047529D981DDAD09FB35A">
+        <or uid="E881DDB060A44350BA66C6F42561690E">
+          <and uid="A9ADD63EB77A4E15BDA1BD7E930C6962">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="232D734D68F947CBA7A387A2B6B4479B" token="#settings#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="37C8F01AECBB4FFF9E88F1FBC8ABD64C" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+          </and>
+          <and uid="758E8BB1518C4DAEA39525A6FB844D4C">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="1F0174D7E2A8435D9C06FCED5D98BDA4" token="#settings#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="858F6204E5E745B684A33EBAEF5063FA" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" />
+          </and>
+        </or>
+        <and uid="2082D9A1B0DC47F28E3C81C69B31F07F">
+          <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="5761F7325D194F44A64D679D1E2CB5F4" token="#settings#" />
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="D3A6B7AA4E234BB59EB93F5D0573E977" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{83AC52CA-6210-4671-90C8-4EE8BA33B6A9}" uid="CAD4E7851DB04176BE4C78435B1075F9" token="#settings#" />
+      <action id="{BBFC056D-9615-431D-94ED-AF1CF0A5AA9E}" uid="DB85D930BF624299914C916C26FB617F" itemid="{1900350A-5177-4FEC-A77E-76810012BAD0}" />
+      <action id="{B762505F-1508-460C-97E9-A575D8854EA2}" uid="7385EC7162EA4C46B0063C042F065CEF" />
+    </actions>
+  </rule>
+  <rule uid="{6DA8A541-4983-4840-9565-110301D9B513}" name="lightbox Site Search Facets">
+    <conditions>
+      <or uid="BE3FC04755354AD88A4B14D5852109C7">
+        <or uid="B3E815848D534E708AFB25BB7371D404">
+          <and uid="5532E0487E654485A4FD06DF088079DF">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="320B9CD15ECA44C9A3C4EFF008F6D546" token="#facets#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="4ED1CCEF09B24B3BA752E376EFF4064D" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+          </and>
+          <and uid="A3ED707048B843FFAC766847868ADA9F">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="C02CF52AC5F94DF9848EE04A9E2470DE" token="#facets#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="8EA35F768E6E47A99D41967A96B5781D" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" />
+          </and>
+        </or>
+        <and uid="2260B96533CC4D249133DF3E97112652">
+          <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="DFDD7073C2054B33AAF37A6E43D64D03" token="#facets#" />
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="3C3236B26C5243B49F6875378ACE6BE1" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{83AC52CA-6210-4671-90C8-4EE8BA33B6A9}" uid="20B8F8A74AD6483AAB53BC3795D728C9" token="#facets#" />
+      <action id="{BBFC056D-9615-431D-94ED-AF1CF0A5AA9E}" uid="41438ED489E14283B2747D322A648024" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+      <action id="{B762505F-1508-460C-97E9-A575D8854EA2}" uid="5C54D7F07FA142D7A4E1343A6C4A915B" />
+    </actions>
+  </rule>
+  <rule uid="{34F6966C-5EAE-43EA-B3F4-0B42342AE0FE}" name="lightbox Site Templates">
+    <conditions>
+      <or uid="6F8E7DA4CE1E4AB7BBAEF7C0CC2DEE6A">
+        <or uid="7D26E8C4E0514D6E95DDA092EC9CB697">
+          <and uid="9602FAAF8E074EE88060DD9EBA572C8F">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="1E5F62A2A4B74E3DBA1683360CB20BFB" token="#page-templates#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="F2DD5498FE6F4F4BAC366003B578181C" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" />
+          </and>
+          <and uid="3C3166B063A74253B580B28CC20BA918">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="2C01056BD01F4AA7AA7185065464BE27" token="#page-templates#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="ECBA3763207D4675882BC5CA5E05DE61" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" />
+          </and>
+        </or>
+        <and uid="4256A715A3454699894AF83167694FC7">
+          <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="82ED6A490B784AB983A3125AB7068CA7" token="#page-templates#" />
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="F1052CB8291145499237239733DB6967" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{D8D96885-75FB-4DC8-9675-B65566906CED}" uid="F2C8D657574742E39B9499A7F4C97EFC" itemid="{9F364148-E598-49D1-ACDC-44E7937AF949}" token="#page-templates#" />
+    </actions>
+  </rule>
+  <rule uid="{8C984AB4-9E48-47E2-81E5-B00984CF32CF}" name="Lightbox Macro">
+    <conditions>
+      <or uid="EE265E8DD48F41CFB97CDFA48C947AE3">
+        <or uid="B7FE0A11AFDE487A80D2A605BE2C9E8D">
+          <and uid="17AE17A65B03494E9E89EEBE8C126DCF">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="BC422939C9DA4875BEB6A7CECF6CB2AB" token="#lightbox#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="2BC67A95F778426282D846805FDD9199" itemid="{BD79B387-CA16-4415-BB57-53D6E77728E4}" />
+          </and>
+          <and uid="55ECC555B61E44BCB808BDE061784E34">
+            <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="19946A73821841ED91801EC1C8A10522" token="#lightbox#" />
+            <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="720A45116850485C887960985C7C3FBD" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" />
+          </and>
+        </or>
+        <and uid="884CD99CC477463B8D566FBD40F08E17">
+          <condition id="{C50D3B3B-E1E9-435A-B513-9479BB6899BB}" uid="8BCA99064B284F27ADACA23FF35F4FC7" token="#lightbox#" />
+          <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" uid="F905887873DB4EBAA96648F9AA7456B5" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" />
+        </and>
+      </or>
+    </conditions>
+    <actions>
+      <action id="{83AC52CA-6210-4671-90C8-4EE8BA33B6A9}" uid="9B636117BBE34D0B8ABD7627024972A8" token="#lightbox#" />
+      <action id="{BBFC056D-9615-431D-94ED-AF1CF0A5AA9E}" uid="D261D0E4E4094632A09E605124364609" itemid="{E36C83E0-E3CE-4639-8C71-9321CBDBD0DA}" />
+      <action id="{B762505F-1508-460C-97E9-A575D8854EA2}" uid="8A41DE3D55B8495E8AD79A93E5F8FEF3" />
+    </actions>
+  </rule>
+</ruleset>
+----version----
+language: en
+version: 1
+revision: ef8a7658-9b66-453f-bb87-b62e21c91c79
+
+----field----
+field: {45CF9130-802A-41BE-B3EB-C02F657DCC2E}
+name: Name
+key: name
+content-length: 22
+
+lightbox Fields Source
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170508T021408Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ef8a7658-9b66-453f-bb87-b62e21c91c79
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170508T025457Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

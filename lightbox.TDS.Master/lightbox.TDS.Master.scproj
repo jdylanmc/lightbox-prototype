@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Sandbox</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>93CB1B90-8B66-4220-B9A2-7EFFC7D22A19</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OutputPath>.\$(Configuration)\</OutputPath>
+    <SourceWebPhysicalPath>..\lightbox.Web</SourceWebPhysicalPath>
+    <SourceWebProject>{A206CD77-59B7-4DD9-A2F4-EAF72B67841F}|lightbox.Web\lightbox.Web.csproj</SourceWebProject>
+    <SourceWebVirtualPath>/lightbox.Web.csproj</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>lightbox.TDS.Master</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName>lightbox.TDS.Master</AssemblyName>
+    <Name>lightbox.TDS.Master</Name>
+    <RootNamespace>lightbox.TDS.Master</RootNamespace>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <PackageAuthor>brainjocks</PackageAuthor>
+    <PackagePublisher>brainjocks</PackagePublisher>
+    <PackageVersion>1.0</PackageVersion>
+    <PackageReadme>
+    </PackageReadme>
+    <SitecoreAssemblyPath>
+    </SitecoreAssemblyPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <EnableCodeGeneration>false</EnableCodeGeneration>
+    <AssemblyStatus>Include</AssemblyStatus>
+    <ManageRoles>False</ManageRoles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Sandbox' ">
+    <DebugSymbols>true</DebugSymbols>
+    <RecursiveDeployAction>SitecoreRecycle</RecursiveDeployAction>
+    <SitecoreDeployFolder>..\sandbox\Website</SitecoreDeployFolder>
+    <SitecoreWebUrl>http://lightbox</SitecoreWebUrl>
+    <SitecoreAccessGuid>CC2FF12D-F442-4ACF-A347-ED3D5D1952EC</SitecoreAccessGuid>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'INT-Single' ">
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'PROD-CD' ">
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>True</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>True</AddDateTimeToPackageName>
+    <SitecoreAssemblyPath>
+    </SitecoreAssemblyPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'PROD-CM' ">
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>True</AddDateTimeToPackageName>
+    <SitecoreAssemblyPath>
+    </SitecoreAssemblyPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'PROD-Single' ">
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>True</AddDateTimeToPackageName>
+    <SitecoreAssemblyPath>
+    </SitecoreAssemblyPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'QA-Single' ">
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'CI' ">
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'Sandbox' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\Internal">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\Sandbox">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'CI' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\CI">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\Internal">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'QA-Single' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\Internal">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\QA-Single">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'INT-Single' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\Internal">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\INT-Single">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'PROD-Single' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\PROD-Single">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'PROD-CM' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\PROD-CM">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'PROD-CD' ">
+    <Replacement Include="..\lightbox.Environments\ALL">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+    <Replacement Include="..\lightbox.Environments\PROD-CD">
+      <TargetPath>.\</TargetPath>
+      <IsFolder>True</IsFolder>
+      <IsRelative>True</IsRelative>
+    </Replacement>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lightbox.Web\lightbox.Web.csproj">
+      <Project>{A206CD77-59B7-4DD9-A2F4-EAF72B67841F}</Project>
+      <Name>lightbox.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="lightbox.Custom.dll" />
+    <ExcludedAssemblies Include="lightbox.Custom.pdb" />
+    <ExcludedAssemblies Include="lightbox.Data.dll" />
+    <ExcludedAssemblies Include="lightbox.Data.pdb" />
+    <ExcludedAssemblies Include="lightbox.Web.dll" />
+    <ExcludedAssemblies Include="lightbox.Web.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreItem Include="sitecore\content.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\lightbox.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\lightbox.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\lightbox\Main.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Layouts\lightbox\Snippet.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\Above Page Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\Below Page Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Containers.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Containers\Footer.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Containers\Header.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Containers\Nested Content Area.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Containers\Page Stripe.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Accordion.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Button Group.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Button Menu.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Button Toolbar.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Call To Action.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Carousel.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Composite Link.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Facets.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Google Map Canvas.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\List Group.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\MegaMenu Items.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\MegaMenu Navbar.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Menu Link List.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Promo Tiles.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Search Box Suggestions.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\lightbox Content Components\Tab.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\Page Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Placeholder Settings\lightbox\Snippet.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\lightbox.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\lightbox\lightbox.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\lightbox\lightbox\Lightbox Macro.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Component Datasource Location.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Component Datasource Location\Rules.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Component Datasource Location\Rules\lightbox Datasource Location.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Get Lookup Source Item.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Get Lookup Source Item\Rules.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Get Lookup Source Item\Rules\lightbox Fields Source.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Insert Options.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Insert Options\Rules.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Insert Options\Rules\lightbox Snippets and Redirects.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Templates Location.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Templates Location\Rules.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Rules\Templates Location\Rules\lightbox Templates Location.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates.item">
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Lightbox Parameters.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Lightbox Parameters\__Standard Values.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Lightbox Parameters\Data.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Lightbox Parameters\Data\Macro Root.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Content\Lightbox.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Content\Lightbox\Lightbox Macro.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Autocomplete.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Autocomplete\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Autocomplete\Content\Images.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Autocomplete\Content\Images\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\default.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\default\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\default\Content\Images.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\default\Content\Images\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Search Result.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Search Result\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Search Result\Content\Images.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Content Page\__Standard Values\Tiles\Search Result\Content\Images\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Autocomplete.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Autocomplete\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Autocomplete\Content\Images.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Autocomplete\Content\Images\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\default.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\default\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\default\Content\Images.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\default\Content\Images\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Search Result.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Search Result\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Search Result\Content\Images.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Home Page\__Standard Values\Tiles\Search Result\Content\Images\Image.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Snippet.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\lightbox\Pages\lightbox Snippet\__Standard Values.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+  <!-- Make sure Output directory is cleaned up every time we build from the command line -->
+  <Target Name="BeforeSitecoreBuild">
+    <RemoveDir Directories="$(OutputPath)" Condition="'$(BuildingInsideVisualStudio)' != 'true' and Exists('$(OutputPath)')" />
+  </Target>
+  <Target Name="AfterFileReplacements">
+    <Message Importance="high" Text="Preparing to run File Replacement cleanup" />
+    <!-- ************** -->
+    <!-- Run RemoveObsoleteFiles on the files copied by [File Replacement]. 
+         Same idea as in CopySourceProjectToOutputDir with BuiltFiles.txt -->
+    <WriteLinesToFile File="$(MSBuildProjectDirectory)\bin\NewCopiedFiles_$(Configuration).txt" Lines="%(_CopiedFiles.Identity)" Overwrite="false" Condition="'$(BuildingInsideVisualStudio)' == 'true'" />
+    <RemoveObsoleteFiles PreviousBuildFiles="$(MSBuildProjectDirectory)\bin\CopiedFiles_$(Configuration).txt" CurrentBuildFiles="$(MSBuildProjectDirectory)\bin\NewCopiedFiles_$(Configuration).txt" />
+    <Delete Files="$(MSBuildProjectDirectory)\bin\CopiedFiles_$(Configuration).txt" Condition="Exists('$(MSBuildProjectDirectory)\bin\CopiedFiles_$(Configuration).txt')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\bin\NewCopiedFiles_$(Configuration).txt" DestinationFiles="$(MSBuildProjectDirectory)\bin\CopiedFiles_$(Configuration).txt" Condition="Exists('$(MSBuildProjectDirectory)\bin\NewCopiedFiles_$(Configuration).txt')" />
+    <Delete Files="$(MSBuildProjectDirectory)\bin\NewCopiedFiles_$(Configuration).txt" Condition="Exists('$(MSBuildProjectDirectory)\bin\NewCopiedFiles_$(Configuration).txt')" />
+    <Message Importance="high" Text="File Replacement cleanup complete" />
+  </Target>
+  <Target Name="AfterSitecoreBuild">
+    <!-- ************** -->
+    <!-- Run RemoveObsoleteFiles on the files copied by TDS into the target Web Application folder -->
+    <Message Importance="high" Text="Preparing to run Sitecore Web Project Deploy Cleanup" />
+    <WriteLinesToFile File="$(MSBuildProjectDirectory)\bin\NewDeployedFiles_$(Configuration).txt" Lines="@(DeployFiles->'$(SitecoreDeployFolder)\%(RecursiveDir)%(FileName)%(Extension)')" Overwrite="false" Condition="'$(SitecoreDeployFolder)' != ''" />
+    <RemoveObsoleteFiles PreviousBuildFiles="$(MSBuildProjectDirectory)\bin\DeployedFiles_$(Configuration).txt" CurrentBuildFiles="$(MSBuildProjectDirectory)\bin\NewDeployedFiles_$(Configuration).txt" />
+    <Delete Files="$(MSBuildProjectDirectory)\bin\DeployedFiles_$(Configuration).txt" Condition="Exists('$(MSBuildProjectDirectory)\bin\DeployedFiles_$(Configuration).txt')" />
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\bin\NewDeployedFiles_$(Configuration).txt" DestinationFiles="$(MSBuildProjectDirectory)\bin\DeployedFiles_$(Configuration).txt" Condition="Exists('$(MSBuildProjectDirectory)\bin\NewDeployedFiles_$(Configuration).txt')" />
+    <Delete Files="$(MSBuildProjectDirectory)\bin\NewDeployedFiles_$(Configuration).txt" Condition="Exists('$(MSBuildProjectDirectory)\bin\NewDeployedFiles_$(Configuration).txt')" />
+    <Message Importance="high" Text="Sitecore Web Project Deploy Cleanup complete" />
+  </Target>
+</Project>

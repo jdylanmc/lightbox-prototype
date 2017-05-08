@@ -1,0 +1,91 @@
+----item----
+version: 1
+id: {1354A3FF-EB82-4C41-9E61-AB044F628417}
+database: master
+path: /sitecore/system/Settings/Rules/Component Datasource Location/Rules/lightbox Datasource Location
+parent: {FAF87069-C5F0-4B90-9405-A38D68DA3D9D}
+name: lightbox Datasource Location
+master: {00000000-0000-0000-0000-000000000000}
+template: {D9BDF22F-6E17-47F3-AB64-49C717BA92DA}
+templatekey: Rule
+created: 20170508T021409Z
+
+----field----
+field: {908EF45D-4940-4B6A-857D-3739BA4ACF8F}
+name: Rule
+key: rule
+content-length: 1266
+
+<ruleset>
+    <rule uid="{D5BAE445-4CF9-4603-8189-3A01F4B7CD28}" name="lightbox Datasource Location">
+        <conditions>
+            <or uid="70483B1CD6A24D1888BD970A97E44365">
+                <or uid="577AF4D31E9444388DBD4828BF519D18">
+                    <or uid="BC283427949D41C084775CBC01955B59">
+					    <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" itemid="{BD79B387-CA16-4415-BB57-53D6E77728E4}" uid="ED1602AD412346D99379A5E50A8962E2"/>
+                        <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" itemid="{572B7313-A3AA-45B3-8500-042F91A018E8}" uid="024F739BF6D845EF85D444AC91C0E28F"/>
+                    </or>
+                    <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" itemid="{89C85BF0-0A73-47C6-AA25-6034938C6D03}" uid="B23CC52BD4C644C785A4B937EC7C7A56"/>
+                </or>
+                <condition id="{7D5DA661-BEF9-441C-B1F7-D80DE3E0972F}" itemid="{E540E223-9C69-4645-88D9-A1A131860144}" uid="369F97E06BA8457BACE7DCC8E271BC0D"/>
+            </or>
+        </conditions>
+        <actions>
+            <action id="{26C41584-2D8F-40F8-B95D-8904C60D6FAB}" itemid="{773F6621-5E8E-4157-B863-4D6092224AEA}" uid="05EF41FB146540AE9F20A35DDD612E4B"/>
+        </actions>
+    </rule>
+</ruleset>
+----version----
+language: en
+version: 1
+revision: fdc15a3d-8243-4d1e-a680-449cf077dcb5
+
+----field----
+field: {45CF9130-802A-41BE-B3EB-C02F657DCC2E}
+name: Name
+key: name
+content-length: 28
+
+lightbox Datasource Location
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170508T021409Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fdc15a3d-8243-4d1e-a680-449cf077dcb5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170508T021410Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
